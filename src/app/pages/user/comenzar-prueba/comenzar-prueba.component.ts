@@ -28,8 +28,6 @@ export class ComenzarPruebaComponent implements OnInit{
     this.examenId=this.route.snapshot.params["examenId"]
     this.noRetrosederLaPagina()
     this.cargarPreguntas()
-
-    console.log(this.preguntas?.length * 2 * 60);
   }
 
 
@@ -118,7 +116,6 @@ export class ComenzarPruebaComponent implements OnInit{
     // console.log(this.intentos);
     this.preguntasService.evalularExamen(this.preguntas).subscribe({
       next:(resp: any)=>{
-      console.log(resp);
       this.puntosConseguidos=resp.puntosMaximos;
       this.respuestasCorrectas=resp.respuestasCorrectas;
       this.intentos=resp.intetos;
@@ -126,10 +123,8 @@ export class ComenzarPruebaComponent implements OnInit{
       },
       error:err =>{
         console.log(err);
-
       }
     })
-
 
   }
 

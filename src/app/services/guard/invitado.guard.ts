@@ -15,7 +15,7 @@ export class InvitadoGuard {
   }
 
   checkLogin(): boolean {
-    if (this.loginService.isLoggedIn() && this.loginService.isInvitado()) {
+    if (this.loginService.isLoggedIn() && this.loginService.isUser()) {
       return true;
     }
     this.router.navigate(['/']);

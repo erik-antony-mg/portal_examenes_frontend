@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
-  apiBase: 'http://api.produccion'
+  apiBase: 'http://3.89.9.133/api',
+  apiLogin:'http://3.89.9.133'
 
 }
