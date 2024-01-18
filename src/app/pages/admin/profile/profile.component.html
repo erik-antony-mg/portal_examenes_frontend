@@ -1,0 +1,53 @@
+<mat-card style="margin-left: 10px;" class="mt10" *ngIf="user">
+  <h1 class="text-center">Detalles del perfil</h1>
+  <mat-card-content>
+    <div class = "bootstrap-wrapper">
+      <div class = "container">
+        <div class = "text-center">
+          <img
+          src="/assets/img/usuario.png"
+          alt="perfil"
+          class = "profile-image">
+
+          <h1 class="mt20">{{user.nombreCompleto}}</h1>
+        </div>
+        <div class = "row">
+          <div class = "col-md-10 offset-md-1">
+            <table class = "table text-center">
+              <tr>
+                <td>Nombre de usuario</td>
+                <td>{{user.username}}</td>
+              </tr>
+              <tr>
+                <td>Rol</td>
+                <td>
+                    <li *ngFor="let role of user.roles">{{ role.name }}</li>
+                </td>
+              </tr>
+              <tr>
+                <td>Teléfono</td>
+                <td>{{user.phone}}</td>
+              </tr>
+              <tr>
+                <td>Edad</td>
+                <td>{{user.age}}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>{{user.email}}</td>
+              </tr>
+              <tr>
+                <td>Estado</td>
+                <td>{{user.enable?"Activo":"No Activo"}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-card-actions class="button-container">
+      <button mat-raised-button color = "primary">Actualizar</button>
+      <button mat-raised-button color = "accent">Compartir</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

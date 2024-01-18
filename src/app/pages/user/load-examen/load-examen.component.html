@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper mt10">
+  <div class="container-fluid">
+    <h1>Exámenes disponibles</h1>
+    <div class="row mt20" *ngIf = "examenes">
+      <div class="col-md-5" *ngFor = "let e of examenes">
+        <mat-card class="mb20 mt10">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+            </div>
+            <mat-card-title>
+              {{ e.titulo }}
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{ e.categoria.titulo }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ e.descripcion }}</p>
+          </mat-card-content>
+          <mat-card-actions >
+            <button mat-stroked-button color="primary">Ver</button>
+            <button mat-stroked-button color="accent" [routerLink] = "'/user/instrucciones/'+e.examenId">Empezar</button>
+            <button mat-stroked-button color="accent">Preguntas : {{ e.numPregun }}</button>
+            <button mat-stroked-button color="accent">P.M : {{ e.puntosMax }}</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-md-12" *ngIf = "examenes.length == 0">
+        <mat-card>
+          <mat-card-content>
+            <h1>No hay exámenes en esta categoría</h1>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

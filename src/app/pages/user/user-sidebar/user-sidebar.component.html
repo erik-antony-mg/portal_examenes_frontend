@@ -1,0 +1,14 @@
+<mat-card class="mt10">
+  <mat-action-list>
+    <div mat-subheader>Categorías disponibles</div>
+    <button routerLink="/user/0" mat-list-item>
+      <mat-icon mat-list-icon>home</mat-icon>Inicio
+    </button>
+    <button  mat-list-item>
+      <mat-icon mat-list-icon>quiz</mat-icon>Exámenes
+    </button>
+    <button [routerLink] = "'/user/'+c.categoriaId" mat-list-item *ngFor = "let c of categorias">
+      <mat-icon mat-list-icon>work</mat-icon> {{ c.titulo }}
+    </button>
+  </mat-action-list>
+</mat-card>

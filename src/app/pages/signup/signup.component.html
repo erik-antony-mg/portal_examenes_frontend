@@ -1,0 +1,120 @@
+<div class="boostrap-wrapper" style="height: 80vh">
+  <div class="container">
+    <div class="" id="divPadre" >
+      <div class="" id="divHijo" >
+        <div class="container text-center">
+          <img
+            src="../../../assets/img/add-user.png"
+            alt="agregar usuario"
+            width="100px"
+            height="100px"
+          />
+        </div>
+        <h1 class="text-center  ">Registrate aqui</h1>
+
+        <form (ngSubmit)="formSubmit()">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> nombre</mat-label>
+            <input
+            [(ngModel)]="user.nombre"
+            required
+              matInput
+              name="nombre"
+              placeholder="dijite su nombre"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> apellido</mat-label>
+            <input
+            [(ngModel)]="user.apellido"
+              matInput
+              required
+              name="apellido"
+              placeholder="dijite su apellido"
+            />
+          </mat-form-field>
+          <div class="text-center">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> Nombre de usuario</mat-label>
+            <input
+            [(ngModel)]="user.username"
+              required
+              name="username"
+              matInput
+              placeholder="dijite su nombre de usuario"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>contraseña</mat-label>
+            <input
+              type="password"
+              [(ngModel)]="user.password"
+              matInput
+              required
+              name="password"
+              placeholder="dijite su nombre de contraseña"
+
+            />
+          </mat-form-field>
+
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> email</mat-label>
+            <input
+            [(ngModel)]="user.email"
+              required
+              type="email"
+              name="email"
+              matInput
+              placeholder="dijite su email"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> Fecha de Nacimiento</mat-label>
+            <input
+              matInput [matDatepicker]="datepicker"
+              [max]="maxDate"
+              name="fechaNacimiento"
+              placeholder="MM/DD/YYYY"
+              [(ngModel)]="fecha"
+              required
+            />
+            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+              <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel>Cancel</button>
+                <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+              </mat-datepicker-actions>
+            </mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label> telefono</mat-label>
+            <input
+            [(ngModel)]="user.phone"
+              matInput
+              name="telefono"
+              placeholder="dijite su telefono"
+              required
+            />
+          </mat-form-field>
+
+
+          <div class="text-center">
+            <button mat-raised-button color="primary">Registrar</button>
+            <button
+              type="reset"
+              style="margin-left: 20px"
+              mat-raised-button
+              color="accent"
+            >
+              Limpiar
+            </button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

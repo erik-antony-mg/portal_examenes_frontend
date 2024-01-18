@@ -1,0 +1,27 @@
+<div class="container text-center mt10">
+  <button routerLink="/admin/addExamenes" mat-raised-button color="primary">Agregar Examen</button>
+</div>
+
+<mat-card class="mt10" *ngFor = "let e of examenes">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        {{ e.titulo }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ e.categoria.titulo }}
+      </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-actions class="example-button-row">
+
+      <button mat-raised-button color="primary" [routerLink] = "'/admin/preguntas/'+e.examenId+'/'+e.titulo">Preguntas</button>
+      <button mat-stroked-button color="primary" >Puntos máximos {{ e.puntosMax }}</button>
+      <button mat-stroked-button color="primary" >Preguntas {{ e.numPregun }}</button>
+      <button [routerLink] = "'/admin/examen/'+e.examenId" mat-raised-button color="primary" >Actualizar</button>
+      <button mat-raised-button color="primary" >Intentos</button>
+      <button mat-raised-button color="warn"  (click)="eliminarExamen(e.examenId)">Eliminar</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+

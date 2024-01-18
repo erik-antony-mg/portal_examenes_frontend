@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="" id="divPadre">
+      <div class="" id="divHijo" >
+        <mat-card style="padding: 5%">
+          <div class="container text-center">
+            <img alt="img/profile.png" src="../../../assets/img/profile.png" width="100" height="100" />
+          </div>
+          <h1 class="text-center ">Inicio de Sesion</h1>
+          <form  (ngSubmit)="formSubmit()">
+            <mat-form-field class="full-width mr10 ml10" appearance="outline">
+              <mat-label> Nombre de usuario</mat-label>
+              <input
+                required
+                name="username"
+                matInput
+                [(ngModel)]="loginData.username"
+                placeholder="dijite su nombre de usuario"
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width mr10 ml10" appearance="outline">
+              <mat-label> contraseña</mat-label>
+              <input
+                required
+                type="password"
+                name="password"
+                matInput
+                [(ngModel)]="loginData.password"
+                placeholder="dijite su contraseña"
+              />
+            </mat-form-field>
+            <br /><br />
+            <div class="text-center">
+              <button mat-raised-button color="primary" >Iniciar Sesion</button>
+              <button
+                type="reset"
+                style="margin-left: 10%"
+                mat-raised-button
+                color="accent"
+              >
+                Limpiar
+              </button>
+            </div>
+          </form>
+          <br />
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

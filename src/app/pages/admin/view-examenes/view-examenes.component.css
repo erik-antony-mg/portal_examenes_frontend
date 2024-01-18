@@ -1,0 +1,14 @@
+.example-header-image{
+  background-image: url('../../../../assets/img/test.png');
+  background-position: center;
+  background-size: cover;
+}
+.example-button-row {
+  display: table-cell;
+  max-width: 800px;
+  width: 5%;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 0.5%;
+}

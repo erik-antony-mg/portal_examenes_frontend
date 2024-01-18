@@ -1,0 +1,60 @@
+
+      <mat-toolbar color="primary">
+
+          <a
+            [routerLink]="'/'"
+            mat-icon-button
+            class="example-icon"
+            arial-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu_books</mat-icon>
+            <span> Portal de examenes</span>
+          </a>
+
+          <span class="example-spacer"></span>
+
+          <ng-container *ngIf="estaEnSesion(); else botonesAuth">
+            <a
+              button
+              mat-icon-button
+              class="example-icon favorite-icon enlace mr10 "
+              aria-label="Example icon-button with heart icon"
+              (click)="queRollTiene()"
+            >
+            <mat-icon>account_circle</mat-icon>
+              {{ getUsuario() }}
+            </a>
+
+            <a
+              mat-icon-button
+              class="example-icon favorite-icon enlace mr15"
+              aria-label="Example icon-button with heart icon"
+              (click)="logout()"
+            >
+              <span class="material-icons"> logout </span>
+              <span> Cerrar de Sesion</span>
+            </a>
+          </ng-container>
+          <ng-template #botonesAuth>
+            <a
+              [routerLink]="'/login'"
+              mat-icon-button
+              class="example-icon favorite-icon mr15"
+              aria-label="Example icon-button with heart icon"
+            >
+              <span class="material-icons"> login </span>
+              <span> Inicio de Sesion</span>
+            </a>
+            <a
+              [routerLink]="'/registrar'"
+              mat-icon-button
+              class="example-icon favorite-icon mr5"
+              aria-label="Example icon-button with heart icon"
+            >
+              <span class="material-icons"> how_to_reg </span>
+              <span> Registrate</span>
+            </a>
+          </ng-template>
+
+    </mat-toolbar>
+

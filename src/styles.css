@@ -1,0 +1,69 @@
+
+/* You can add global styles to this file, and also import other style files */
+:root{
+  color-scheme: light dark;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #f0f0f0; }
+
+.text-center{
+  text-align: center;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.centrarDiv{
+  display: grid;
+  place-items: center;
+}
+#divPadre {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#divHijo {
+  width: 33.33%; /* Tamaño del div hijo en relación con el div padre */
+  /* Color de fondo del div hijo */
+   /* Espaciado interno para que el contenido no esté pegado a los bordes */
+  box-sizing: border-box; /* Incluye el padding en el ancho total del div */
+}
+
+.mb20{
+  margin-bottom: 20px;
+}
+
+
+
+.mr15{
+  margin-right: 15%;
+}
+.mr12{
+  margin-right: 12%;
+}
+.mr10{
+  margin-right: 10%;
+}
+.mr5{
+  margin-right: 7%;
+}
+.pd2{
+  padding: 2%;
+}
+.mt10{
+  margin-top: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 16px; /* Añade un espacio de 16px entre los elementos */
+}
+
+.fondo{
+  background: url('assets/img/background.jpg') ;
+  background-size: cover;
+}

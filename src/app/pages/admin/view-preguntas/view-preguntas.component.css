@@ -1,0 +1,11 @@
+.tamañoTitulo{
+  font-size: 20px;
+}
+
+
+.conN{
+  font-weight: bold !important;
+}
+.sep{
+  display: flex; gap: 8px;
+}

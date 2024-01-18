@@ -1,0 +1,13 @@
+<ngx-ui-loader
+  fgsColor="#3F51B5"
+  pbColor="#3F51B5"
+  text="Espere por favor ..."
+  textColor="#3F51B5"
+  minTime="80"
+  fgsType = "square-jelly-box"
+></ngx-ui-loader>
+<div ngxUiLoaderBlurred (blur)="5">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+</div>
+
